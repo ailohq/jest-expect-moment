@@ -1,6 +1,6 @@
 {
   "name": "@ailo/jest-expect-moment",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "expect.toEqualMoment jest matcher function to be used when testing objects containing moment dates with jest.",
   "main": "build/main/register.js",
   "typings": "types.d.ts",

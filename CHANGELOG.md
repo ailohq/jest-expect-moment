@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/ailohq/jest-expect-moment/compare/v1.1.0...v1.1.1) (2020-07-07)
+
+
+### Bug Fixes
+
+* Fix ts typedefs ([350e4eb](https://github.com/ailohq/jest-expect-moment/commit/350e4eb686d47485930783d58b6154735cd08de7))
+
 ## [1.1.0](https://github.com/ailohq/jest-expect-moment/compare/v1.0.2...v1.1.0) (2020-07-07)
 
 
