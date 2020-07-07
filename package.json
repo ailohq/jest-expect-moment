@@ -2,9 +2,9 @@
   "name": "@ailo/jest-expect-moment",
   "version": "1.0.2",
   "description": "expect.toEqualMoment jest matcher function to be used when testing objects containing moment dates with jest.",
-  "main": "build/main/index.js",
-  "typings": "build/main/index.d.ts",
-  "module": "build/module/index.js",
+  "main": "build/main/register.js",
+  "typings": "types.d.ts",
+  "module": "build/module/register.js",
   "repository": "https://github.com/ailohq/jest-expect-moment",
   "license": "MIT",
   "keywords": [],
@@ -41,6 +41,15 @@
   },
   "jest": {
     "preset": "ts-jest",
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "jsx",
+      "ts",
+      "tsx",
+      "node",
+      "d.ts"
+    ],
     "testEnvironment": "node",
     "testPathIgnorePatterns": [
       "node_modules",
