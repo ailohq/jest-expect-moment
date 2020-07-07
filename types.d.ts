@@ -1,18 +1,16 @@
-import { Moment } from "moment";
+/// <reference types="moment" />
 /// <reference types="jest" />
 
-declare global {
-  namespace jest {
-    interface Matchers<R> {
-      toEqualMoment(expected: Moment): R;
-    }
+declare namespace jest {
+  interface Matchers<R> {
+    toEqualMoment(expected: moment.Moment): R;
+  }
 
-    interface InverseAsymmetricMatchers {
-      toEqualMoment(expected: Moment): any;
-    }
+  interface InverseAsymmetricMatchers {
+    toEqualMoment(expected: moment.Moment): any;
+  }
 
-    interface Expect {
-      toEqualMoment(expected: Moment): any;
-    }
+  interface Expect {
+    toEqualMoment(expected: moment.Moment): any;
   }
 }
