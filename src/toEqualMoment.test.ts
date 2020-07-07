@@ -6,30 +6,29 @@ expect.extend({
 });
 
 describe("toEqualMoment", () => {
-  const date = "2020-04-02T22:42:18.804Z";
-  const givenMoment = moment(date);
-  const matchingMoment = moment(date).utc();
+  const m1 = moment("2000-01-01T00:00:00.000Z");
+  const m2 = moment("2000-01-01T00:00:00.000Z").utc();
 
   describe("when toEqual is used for comparing moments", () => {
     it("should fail for two moments that represent same date", () => {
-      expect(givenMoment).not.toEqual(matchingMoment);
+      expect(m1).not.toEqual(m2);
     });
   });
 
   describe("when toEqualMoment is used for comparing moments", () => {
     it("should match two moments that represent same date", () => {
-      expect(givenMoment).toEqualMoment(matchingMoment);
+      expect(m1).toEqualMoment(m2);
     });
 
     it("should match two moments when used within toMatchObject", () => {
       const received = {
         someProp: "someProp",
-        date: givenMoment,
+        date: m1,
       };
 
       const expected = {
         ...received,
-        date: expect.toEqualMoment(matchingMoment),
+        date: expect.toEqualMoment(m2),
       };
 
       expect(received).toMatchObject(expected);
@@ -39,7 +38,7 @@ describe("toEqualMoment", () => {
       const nonMatchingDate = "2020-05-02T22:42:18.804Z";
       const nonMatchingMoment = moment(nonMatchingDate);
 
-      expect(givenMoment).not.toEqualMoment(nonMatchingMoment);
+      expect(m1).not.toEqualMoment(nonMatchingMoment);
     });
   });
 });
